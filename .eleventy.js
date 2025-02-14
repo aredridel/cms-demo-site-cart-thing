@@ -22,6 +22,7 @@ export default async function config(eleventyConfig) {
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("assets/img"); // Don't process the image folder.
   eleventyConfig.addPassthroughCopy("admin/"); // Don't process the CMS folder.
+  eleventyConfig.addPassthroughCopy("assets/style.css"); // Don't process CSS.
   eleventyConfig.addPassthroughCopy("cart/"); // Don't process the cart folder.
 
   // Disable 11ty development server live reload when using the CMS locally.

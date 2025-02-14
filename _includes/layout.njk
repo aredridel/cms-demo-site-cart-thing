@@ -8,13 +8,14 @@ title: My Rad Blog
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/cart/cart.js" type="module"></script>
+    <link rel="stylesheet" href="/assets/style.css">
     <title>{{ title }}</title>
   </head>
   <body>
     <header>
         <h1>{{ title }} </h1>
+        <shopping-cart></shopping-cart>
     </header>
-    <shopping-cart></shopping-cart>
     {{ content | safe }}
   </body>
 </html>
