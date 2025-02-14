@@ -1,0 +1,1 @@
+header { display: grid; grid-template: "text cart" 1fr / auto min-content }
