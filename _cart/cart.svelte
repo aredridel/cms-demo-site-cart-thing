@@ -12,7 +12,8 @@
 		right: 0; 
 		width: 150px;
 		background-color: lightgrey;
-		height: 100vw;
+		height: 100vh;
+		height: 100svh;
 	}
 </style>
 
@@ -29,9 +30,9 @@
 		{#if items.length}
 			<table>
 				<tbody>
-	{#each items as item }
-		<tr><td>{item.name}</td><td>{item.amount}</td></tr>	
-	{/each}
+					{#each items as item}
+						<tr><td>{item.name}</td><td>{item.amount}</td></tr>	
+					{/each}
 				</tbody>
 			</table>
 			<button>Checkout</button>
