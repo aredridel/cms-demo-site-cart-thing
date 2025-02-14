@@ -1,7 +1,4 @@
 export default async function config(eleventyConfig) {
-  // Add support for YAML data files with .yml extension
-  eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
-
   // Merge data instead of overriding
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
@@ -23,10 +20,11 @@ export default async function config(eleventyConfig) {
   });
 
   // Don't process folders with static assets e.g. images
-  eleventyConfig.addPassthroughCopy("assets/img"); // don't process the image folder
-  eleventyConfig.addPassthroughCopy("admin/"); // don't process the CMS folder
+  eleventyConfig.addPassthroughCopy("assets/img"); // Don't process the image folder.
+  eleventyConfig.addPassthroughCopy("admin/"); // Don't process the CMS folder.
+  eleventyConfig.addPassthroughCopy("cart/"); // Don't process the cart folder.
 
-  // Disable 11ty dev server live reload when using CMS locally
+  // Disable 11ty development server live reload when using the CMS locally.
   eleventyConfig.setServerOptions({
     liveReload: false
   });
@@ -34,9 +32,9 @@ export default async function config(eleventyConfig) {
   return {
     templateFormats: ["md", "njk", "liquid"],
 
-    // If your site lives in a different subdirectory, change this.
+    // If your site lives in a different sub-directory, change this.
     // Leading or trailing slashes are all normalized away, so don’t worry about it.
-    // If you don’t have a subdirectory, use "" or "/" (they do the same thing)
+    // If you don’t have a sub-directory, use "" or "/" (they do the same thing)
     // This is only used for URLs (it does not affect your file structure)
     pathPrefix: "/",
 

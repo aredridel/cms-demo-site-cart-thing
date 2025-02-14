@@ -11,7 +11,23 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@sveltia/cms": "^0.56.5"
+    "@sveltia/cms": "^0.56.5",
+    "esbuild": "^0.25.0",
+    "esbuild-svelte": "^0.9.0",
+    "svelte": "^5.20.0",
+    "svelte-preprocess": "^6.0.3"
   },
-  "type": "module"
+  "type": "module",
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "svelte-preprocess"
+    ]
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
 }
