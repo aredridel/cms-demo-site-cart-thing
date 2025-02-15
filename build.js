@@ -1,21 +1,21 @@
 import esbuild from "esbuild";
 import esbuildSvelte from "esbuild-svelte";
-import {sveltePreprocess} from "svelte-preprocess";
+import { sveltePreprocess } from "svelte-preprocess";
 
-esbuild
-  .build({
-    entryPoints: ["_cart/cart.js"],
-    mainFields: ["svelte", "browser", "module", "main"],
-    conditions: ["svelte", "browser"],
-    bundle: true,
-    outfile: "cart/cart.js",
-    plugins: [
-      esbuildSvelte({
-        compilerOptions: {
-          customElement: true
-        },
-        preprocess: sveltePreprocess(),
-      }),
-    ],
-  })
-  .catch(() => process.exit(1));
+const ctx = await esbuild.context({
+  entryPoints: ["_cart/cart.js"],
+  mainFields: ["svelte", "browser", "module", "main"],
+  conditions: ["svelte", "browser"],
+  bundle: true,
+  outfile: "cart/cart.js",
+  plugins: [
+    esbuildSvelte({
+      compilerOptions: {
+        customElement: true,
+      },
+      preprocess: sveltePreprocess(),
+    }),
+  ],
+});
+
+await ctx.watch();

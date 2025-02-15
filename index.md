@@ -6,3 +6,12 @@
 - Checkout with Stripe I guess, so the total server-side private state is
   an AWS key or something for sending the ePub files, and a Stripe key for
   collecting payments. Actual record of sales goes in email and Stripe.
+
+Backend configuration:
+
+```
+OWNER_EMAIL
+STRIPE_KEY
+```
+
+- [Test Product Page](test)

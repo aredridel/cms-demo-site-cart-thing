@@ -1,12 +1,24 @@
-<script lang="ts">
-    import {items} from "./cart.svelte.js"
-    let { name, amount } = $props();
+<svelte:options customElement="add-to-cart" />
 
-    function add_to_cart() {
-    items.push({name, amount})
+<script lang="ts">
+  import { items, ui } from "./cart.svelte.js";
+  let { name, amount, sku } = $props();
+
+  let item_in_cart = $derived(items.find((e) => e.sku == sku));
+
+  function add_to_cart() {
+    if (item_in_cart) {
+    ui.open = true;
+    } else {
+    items.push({ sku, name, amount });
     }
+  }
 </script>
 
-<svelte:options customElement="add-to-cart"/>
-
-<button onclick={add_to_cart}>Add to Cart</button>
+<button onclick={add_to_cart}>
+  {#if item_in_cart}
+    In Your Cart
+  {:else}
+    Add to Cart
+  {/if}
+</button>
