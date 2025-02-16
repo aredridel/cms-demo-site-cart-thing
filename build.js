@@ -7,7 +7,7 @@ const ctx = await esbuild.context({
   mainFields: ["svelte", "browser", "module", "main"],
   conditions: ["svelte", "browser"],
   bundle: true,
-  outfile: "cart/cart.js",
+  outfile: "_site/cart.js",
   plugins: [
     esbuildSvelte({
       compilerOptions: {
