@@ -83,6 +83,7 @@ if (is_string(@$_GET['success'])) {
     $validator->assert($token, new PermittedFor("download"));
 
     $p = $token->claims()->get("p");
+    $d = $_GET["d"];
 
     $file = null;
     foreach ($catalogue as $book) {
@@ -97,9 +98,9 @@ if (is_string(@$_GET['success'])) {
     }
 
     header("Content-Disposition: download; filename*={$file}");
-    if (preg_match("/[.]epub$", $file)) {
+    if (preg_match("/[.]epub$/", $file)) {
         header("Content-Type: application/epub+zip");
-    } else if (preg_match("/[.]pdf", $file)) {
+    } else if (preg_match("/[.]pdf$/", $file)) {
         header("Content-Type: application/pdf");
     } else {
         header("Content-Type: application/octet-stream");

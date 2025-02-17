@@ -10,4 +10,7 @@ imageAltText: ''
 ---
 Hi! Welcome!
 
-<add-to-cart sku="test" name="Test Product!" amount="21.95"></add-to-cart>
+Here’s an e-book for you:
+
+<add-to-cart sku="slashfic" name="A Fragment Out of Time (EPUB)"
+amount="1.95"></add-to-cart>

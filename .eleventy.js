@@ -28,6 +28,7 @@ export default async function config(eleventyConfig) {
 
   eleventyConfig.ignores.add("_cart");
   eleventyConfig.ignores.add("checkout");
+  eleventyConfig.ignores.add("*.epub");
 
   // Disable 11ty development server live reload when using the CMS locally.
   eleventyConfig.setServerOptions({

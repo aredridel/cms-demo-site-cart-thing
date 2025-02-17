@@ -13,6 +13,6 @@
 <ul>
     {#each items as item}
         {@const [sku, name] = item}
-        <li><a href="checkout.phar.php?d={sku}&key={key}">{name}</a></li>
+        <li><a href="checkout.phar.php?d={sku}&key={key}" download>{name}</a></li>
     {/each}
 </ul>
