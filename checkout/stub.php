@@ -1,6 +1,6 @@
 <?php
 
-Phar::mapPhar("checkout");
-include "phar://checkout/checkout.php";
+Phar::mapPhar(".");
+require "phar://./checkout.php";
 
 __HALT_COMPILER();
