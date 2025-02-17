@@ -7,16 +7,12 @@
   an AWS key or something for sending the ePub files, and a Stripe key for
   collecting payments. Actual record of sales goes in email and Stripe.
 
-To Do
-- Make the client side storage sticky
-- Use fetch() validation that product pages still exist?
-- Backend
-
 Backend configuration:
 
 ```
 OWNER_EMAIL
 STRIPE_KEY
+JWT_KEY
 ```
 
 - [Test Product Page](test)
