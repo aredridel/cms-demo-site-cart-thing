@@ -10,4 +10,4 @@ imageAltText: ''
 ---
 Hi! Welcome!
 
-<add-to-cart sku=”test” name="Test Product!" amount="21.95"></add-to-cart>
+<add-to-cart sku="test" name="Test Product!" amount="21.95"></add-to-cart>

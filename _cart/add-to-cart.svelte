@@ -8,9 +8,9 @@
 
   function add_to_cart() {
     if (item_in_cart) {
-    ui.open = true;
+      ui.open = true;
     } else {
-    items.push({ sku, name, amount });
+      items.push({ sku, name, amount });
     }
   }
 </script>

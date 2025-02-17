@@ -23,8 +23,11 @@ export default async function config(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets/img"); 
   eleventyConfig.addPassthroughCopy("admin/");
   eleventyConfig.addPassthroughCopy("assets/style.css");
-  eleventyConfig.addPassthroughCopy("checkout.php");
+  eleventyConfig.addPassthroughCopy("checkout.phar.php");
   eleventyConfig.addPassthroughCopy("*.csv");
+
+  eleventyConfig.ignores.add("_cart");
+  eleventyConfig.ignores.add("checkout");
 
   // Disable 11ty development server live reload when using the CMS locally.
   eleventyConfig.setServerOptions({

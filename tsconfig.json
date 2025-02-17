@@ -1,5 +1,12 @@
 {
     "compilerOptions": {
-        "verbatimModuleSyntax": true
+        "module": "esnext",
+        "verbatimModuleSyntax": true,
+        "allowImportingTsExtensions": true,
+        "plugins": [{
+            "name": "typescript-svelte-plugin",
+            "enabled": true,
+            "assumeIsSvelteProject": true
+        }]
     }
 }

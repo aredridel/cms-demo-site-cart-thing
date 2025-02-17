@@ -1,9 +1,9 @@
 <svelte:options customElement="shopping-cart" />
 
 <script lang="ts">
-  import { items, ui } from "./cart.svelte.js";
+  import { items, ui, type Item } from "./cart.svelte.ts";
 
-  function remove(item) {
+  function remove(item: Item) {
     return function () {
       items.splice(items.indexOf(item), 1);
     };
@@ -32,7 +32,7 @@
           {/each}
         </tbody>
       </table>
-      <button>Checkout</button>
+      <a href="/checkout.phar.php?p={btoa(JSON.stringify(items.map(e => [e.sku, e.amount])))}">Checkout</a>
     {/if}
   </div>
 {/if}
